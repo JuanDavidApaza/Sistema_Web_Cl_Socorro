@@ -7,7 +7,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class SecurityConfig {
-	
+	// haciendo pruebas git
 	 @Bean
 	    public SecurityFilterChain seguridad(HttpSecurity http) throws Exception {
 
