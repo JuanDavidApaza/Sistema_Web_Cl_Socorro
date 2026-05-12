@@ -1,0 +1,88 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 11/05/2026, 10:51:25 PM
+    Author     : STEWARD
+*/
+
+/* Estilos para que combine con el Staff Médico */
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* El título azul claro del diseño original */
+.titulo-pagina {
+    color: #5dade2;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.contacto-wrapper {
+    display: flex;          /* Esto los pone uno al lado del otro */
+    flex-direction: row;    /* Asegura que sea en fila */
+    justify-content: space-between; /* Deja un espacio equilibrado entre ambos */
+    align-items: flex-start; 
+    gap: 20px;              /* Espacio de separación entre las dos mitades */
+    width: 100%;
+}
+
+/* Estilo de la "Tarjeta" del Staff Médico */
+.info-container, .form-container {
+    width: 48%;             /* Casi la mitad cada uno para que entren bien */
+    min-width: 300px;       /* Para que no se aplasten mucho en pantallas chicas */
+    box-sizing: border-box; /* Evita que el padding ensanche la caja */
+    background: white;
+    border: 1px solid #e0e0e0; /* Gris suave del staff */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    flex: 1;                /* Esto hace que cada uno ocupe la mitad (50%) */
+    padding: 20px;
+}
+
+/* La etiqueta azul de "Médico General" para tus subtítulos */
+.etiqueta-especialidad {
+    background-color: #007bff; /* El azul fuerte de la foto */
+    color: white;
+    padding: 3px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* Inputs redondeados del diseño */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #5dade2;
+    border-radius: 15px; /* Súper redondeado */
+    box-sizing: border-box;
+}
+
+/* Botones con los colores exactos */
+.btn-enviar {
+    background-color: #f5b7b1; /* El rosado de tu imagen */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-volver {
+    background-color: #707b7c; /* El gris del botón Volver */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
