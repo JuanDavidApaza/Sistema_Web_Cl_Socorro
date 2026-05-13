@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica María del Socorro | Tu bienestar, nuestro compromiso</title>
+
+    <!-- Fuentes y estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css(v=1.5)}">
+</head>
+<body>
+
+<!-- 1. Barra de Navegación -->
+<header class="navbar">
+    <a th:href="@{/}" class="logo">
+        <img th:src="@{/css/img/logo.png}" alt="Logo Clínica María del Socorro">
+    </a>
+
+    <nav class="nav-links-container">
+        <a th:href="@{/nosotros}">Nosotros</a>
+        <a href="#staff">Staff médico</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="nav-actions">
+        <div class="phone-contact">
+            <i class="fa-solid fa-phone"></i>
+            <span>996 220 079</span>
+        </div>
+        <button class="btn-primary">
+            Agenda una cita <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+    </div>
+</header>
+
+<main>
+    <!-- 2. Hero Section -->
+    <section class="hero-section">
+        <div class="hero-images">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Doctora sonriendo" class="img-main">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pasillo de hospital" class="img-sub-1">
+            <img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Equipamiento médico" class="img-sub-2">
+        </div>
+
+        <div class="hero-text-block">
+            <div class="hero-content">
+                <span class="hero-subtitle">Tu bienestar,</span>
+                <h1 class="hero-title">NUESTRO<br>COMPROMISO</h1>
+            </div>
+            <button class="play-btn" aria-label="Reproducir video institucional">
+                <i class="fa-solid fa-play"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- 3. Sección de Estadísticas -->
+    <section class="stats-section">
+        <h2 class="section-title"><u>CONFÍA EN LA EXPERIENCIA DE LA<br>CLÍNICA MARÍA DEL SOCORRO</u></h2>
+        <p class="section-subtitle">Clínica María del Socorro: más de 25 años cuidando tu salud con especialistas de confianza</p>
+
+        <div class="stats-grid">
+            <article class="stat-card">
+                <h3 class="stat-number stat-salmon" th:text="${pacientes}">+500k</h3>
+                <p class="stat-label">Pacientes<br>atendidos</p>
+            </article>
+            <article class="stat-card">
+                <h3 class="stat-number stat-salmon" th:text="${experiencia}">+25</h3>
+                <p class="stat-label">Años de<br>experiencia</p>
+            </article>
+            <article class="stat-card">
+                <h3 class="stat-number stat-salmon" th:text="${medicos}">+50</h3>
+                <p class="stat-label">Médicos<br>Especializados</p>
+            </article>
+            <article class="stat-card">
+                <h3 class="stat-number stat-salmon" th:text="${urgencias}">24/7</h3>
+                <p class="stat-label">Atención de<br>Urgencias</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- 4. Sección de Especialidades -->
+    <section class="specialties-section" id="especialidades">
+        <h2 class="section-title"><u>NUESTRAS ESPECIALIDADES</u></h2>
+
+        <div class="specialties-grid">
+            <article class="specialty-card">
+                <img src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cardiología">
+                <div class="specialty-info">
+                    <h3>Cardiología</h3>
+                </div>
+            </article>
+            <article class="specialty-card">
+                <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pediatría">
+                <div class="specialty-info">
+                    <h3>Pediatría</h3>
+                </div>
+            </article>
+            <article class="specialty-card">
+                <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Traumatología">
+                <div class="specialty-info">
+                    <h3>Traumatología</h3>
+                </div>
+            </article>
+            <article class="specialty-card">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Neurología">
+                <div class="specialty-info">
+                    <h3>Neurología</h3>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<!-- 5. Footer (Pie de página) -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col brand-col">
+            <div class="logo footer-logo">
+                <i class="fa-solid fa-notes-medical"></i>
+                <span>Clínica María del Socorro</span>
+            </div>
+            <p class="footer-desc">Más de 25 años brindando atención médica de calidad, con tecnología de punta y el mejor staff de especialistas comprometidos con tu bienestar.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col links-col">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a th:href="@{/nosotros}"><i class="fa-solid fa-chevron-right"></i> Nosotros</a></li>
+                <li><a href="#staff"><i class="fa-solid fa-chevron-right"></i> Staff Médico</a></li>
+                <li><a href="#especialidades"><i class="fa-solid fa-chevron-right"></i> Especialidades</a></li>
+                <li><a href="#contacto"><i class="fa-solid fa-chevron-right"></i> Portal del Paciente</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+            <h3>Contáctanos</h3>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i><span>Av. Principal 1234, Lima, Perú</span></li>
+                <li><i class="fa-solid fa-phone"></i><span>(01) 456-7890<br>996 220 079</span></li>
+                <li><i class="fa-solid fa-envelope"></i><span>citas@clinicasocorro.pe</span></li>
+                <li><i class="fa-solid fa-clock"></i><span><strong>Emergencias 24/7</strong></span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Clínica María del Socorro. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- 6. Botón Flotante Scroll Top -->
+<button id="btnScrollTop" aria-label="Subir al inicio">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- Archivo JS separado importado con Thymeleaf -->
+<script th:src="@{/css/js/main.js}"></script>
+</body>
+</html>
