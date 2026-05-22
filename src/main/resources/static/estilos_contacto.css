@@ -1,0 +1,185 @@
+/* Created on : 11/05/2026
+   Author     : STEWARD
+   Proyecto   : Clínica María del Socorro
+*/
+
+/* Variables Globales de Color */
+:root {
+    --fondo-celeste: #EBF5FB;
+    --azul-botones: #7FB3D5;
+    --azul-oscuro: #2980B9;
+    --blanco: #FFFFFF;
+}
+
+body {
+    background-color: #F4F7F6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* El título principal */
+.titulo-pagina {
+    color: var(--azul-oscuro);
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* El contenedor que envuelve las columnas */
+.contacto-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite que se acomode en pantallas chicas */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+    background-color: var(--fondo-celeste);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+/* Cajas de información, galería y formulario */
+.info-container, .galeria-container, .form-container {
+    flex: 1;
+    min-width: 300px;
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    box-sizing: border-box;
+}
+
+/* Subtítulos con barra lateral azul */
+h2, h3 {
+    color: #3498DB;
+    border-left: 5px solid #3498DB;
+    padding-left: 10px;
+    margin-top: 0;
+}
+
+/* Tarjetas de sedes e infraestructura */
+.sede-card {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.sede-card img {
+    width: 100%;
+    border: 1px solid #5dade2;
+    border-radius: 12px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.sede-card img:hover {
+    transform: scale(1.02);
+}
+
+/* Datos sueltos de contacto */
+.dato-contacto {
+    margin-bottom: 15px;
+}
+
+/* Inputs y elementos de formulario */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Botones con tus estilos originales */
+.btn-enviar {
+    background-color: #f5b7b1; /* El rosado de la maqueta */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #f1948a;
+}
+
+.btn-volver {
+    background-color: var(--azul-botones);
+    color: white;
+    padding: 12px 35px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 25px auto;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: var(--azul-oscuro);
+}
+
+/* Contenedor del mapa */
+.mapa-box {
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* ========================================== */
+/* ESTILOS NUEVOS: TABLA DE PERSONAL MÉDICO    */
+/* ========================================== */
+.staff-container {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.tabla-medicos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabla-medicos th {
+    background-color: var(--azul-oscuro);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.tabla-medicos tr:nth-child(even) {
+    background-color: #f9fbfd;
+}
+
+.tabla-medicos tr:hover {
+    background-color: #f1f7fa;
+}
